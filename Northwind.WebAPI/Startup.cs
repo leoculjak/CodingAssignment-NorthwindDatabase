@@ -40,7 +40,7 @@ namespace Northwind.WebAPI
             services.AddCors(); // Make sure you call this previous to AddMvc
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var connection = @"Server=.;Database=Northwind;Trusted_Connection=False;user=sa; Password=QWEasd123!";
+            var connection = @"Server=.;Database=Northwind;Trusted_Connection=False;user=sa; Password=********";
             services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(connection));
 
             services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
